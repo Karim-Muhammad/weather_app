@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Weather app</title>
+     <!-- Style -->
+     <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/a363edd0e0.css" crossorigin="anonymous"> -->
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+     <!-- <link rel="stylesheet" href="css/fontawesome.css"> -->
+     <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     <link rel="stylesheet" href="css/style.css">
+
+     <style>
+          .material-symbols-outlined {
+               font-variation-settings:
+                    'FILL' 0,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 48
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+
+          <div class="form_weather">
+               <form>
+                    <div class="input-search">
+                         <span class="material-symbols-outlined">location_on</span>
+                         <input type="text" id="country" class="form_country" name="country" placeholder="Country">
+                         <span class="material-symbols-outlined search-icon">search</span>
+                    </div>
+                    <div class="more-search">
+                         <textarea name="feeling" id="feeling" placeholder="Your feeling"></textarea>
+                         <select name="unit" id="unit" class="form_unit">
+                              <option value="imperial">imperial</option>
+                              <option value="metric">metric</option>
+                              <option value="standard">standard</option>
+                         </select>
+                    </div>
+               </form>
+          </div>
+          <!-- Weather Search -->
+
+          <div class="not-found">
+               <div class="holder">
+                    <img src="assets/404.png" alt="not-found">
+                    <p>Sorry, something went wrong!</p>
+               </div>
+          </div>
+
+          <!-- Not Found -->
+
+          <div class="app__main">
+               <div class="app__main-header">
+                    <span class="left country"></span>
+                    <span class="right time"></span>
+               </div>
+               <!-- Header -->
+
+               <div class="app__main-img">
+                    <img src="" alt="">
+                    <p class="desc"></p>
+                    <p class="feel"></p>
+               </div>
+               <!-- Img -->
+
+               <div class="app__main-info">
+
+                    <div class="info-left">
+                         <p class="air">
+                              <span class="material-symbols-outlined">air</span>
+                              <span class="val"></span>
+                         </p>
+                         <p class="rain">
+                              <span class="material-symbols-outlined">water_drop</span>
+                              <span class="val"></span>
+                         </p>
+                         <p class="sun">
+                              <span class="material-symbols-outlined">light_mode</span>
+                              <span class="val"></span>
+                         </p>
+                    </div>
+                    <div class="info-right">
+                         <p class="val"></p>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <!-- <script src="https://kit.fontawesome.com/a363edd0e0.js" crossorigin="anonymous"></script> -->
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script> -->
+     <!-- <script src="js/fontawesome.js"></script> -->
+     <!-- <script src="js/app.js"></script> -->
+     <script src="js/ap.js"></script>
+</body>
+
+</html>

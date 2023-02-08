@@ -1,0 +1,183 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     width: 100vw;
+     height: 100vh;
+     background-color: #325774;
+     color: aliceblue;
+     display: flex;
+     align-items: center;
+}
+
+button {
+     background-color: none;
+     border: none;
+     outline: none;
+}
+
+.container {
+     width: 80%;
+     height: 202px;
+     margin: auto;
+}
+.app__main,
+.form_weather {
+     width: 30%;
+     margin: auto;
+     /* background-color: black; */
+}
+
+/* Search Form View */
+
+.form_weather {
+     margin-bottom: 50px;
+}
+
+.form_weather form {
+     border-radius: 2rem;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+}
+
+form .input-search {position: relative;}
+form .input-search span, button {position: absolute;font-size: 2.7rem; padding: 0 10px;}
+form .input-search span:first-child {left: 0;top: 50%; transform: translate(0%, -50%);}
+/* form .input-search button {right: 0;top: 50%; transform: translate(0%, -50%); margin-right: 20px; font-size: 2rem; background-color: #008cff4b; border-radius: 50%; width: 50px; height: 50px; line-height: 50px;} */
+form .input-search span:last-child {right: 0;top: 50%; transform: translate(0%, -50%); margin-right: 20px; font-size: 2rem; background-color: #008cff4b; border-radius: 50%; width: 50px; height: 50px; line-height: 50px; transition: 0.3s; cursor: pointer;}
+form .input-search span:last-child:hover {
+     background-color: #3b6c91;
+}
+
+.form_weather form .input-search input{
+     display: block;
+     border-radius: 1rem;
+     border: none;
+     outline: none;
+     font-size: 2rem;
+     padding: 2rem 4rem;
+     width: 100%;
+}
+
+.form_weather form select:last-child {
+     padding: 0.5rem 1rem;
+     margin-left: auto;
+}
+
+.form_weather input {
+     flex: 1;
+     margin-left: auto;
+     padding: 10px;
+}
+
+.form_weather .more-search {
+     padding: 1rem 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+}
+
+.form_weather .more-search textarea {
+     width: 100%;
+     padding: 1rem 2rem;
+}
+/* Not Found View */
+
+.not-found {
+     display: none;
+     scale: 0;
+     opacity: 0;
+}
+
+.fadeIn {
+     animation: 0.3s fadeIn forwards ease-in-out;
+}
+
+@keyframes fadeIn {
+     to {
+          scale: 1;
+          opacity: 1;
+     }
+}
+
+.not-found .holder {
+     text-align: center;
+     width: 30%;
+     margin: auto;
+}
+
+.not-found .holder img {
+     width: 70%;
+}
+
+.not-found .holder p {
+     margin-top: 1rem;
+     font-size: 1.5rem;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Information of Weather View */
+.app__main {
+     display: none;
+     opacity: 0;
+     scale: 0;
+     color: white;
+     font-size: 1.5rem;
+}
+.app__main .app__main-header {
+     padding: 0 20px;
+     display: flex;
+     justify-content: space-between;
+}
+.app__main .app__main-header :is(.country, .time) {
+     padding: 5px 10px;
+     border-radius: 1rem;
+     background-color: rgb(74, 74, 74);
+}
+
+
+.app__main .left {
+     color: white !important;
+}
+
+.app__main-img {
+     padding: 2rem 0;
+     text-align: center;
+     font-size: 1.5rem;
+}
+
+.app__main-img p {
+     margin: 10px 0;
+}
+
+.app__main img {
+     width: 30%;
+     display: block;
+     margin: auto;
+     object-fit: cover;
+}
+
+.app__main-info {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.app__main-info * {
+     flex: 1;
+}
+
+.app__main-info .info-left {
+     color: #888;
+}
+.app__main-info .info-right {
+     font-size: 3rem;
+}
